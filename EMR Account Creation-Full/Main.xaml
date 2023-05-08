@@ -1,0 +1,1271 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1232,1729" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="96">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Dynamic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="122">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="766,1664" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="x:String" Name="vURL" />
+      <Variable x:TypeArguments="x:String" Default="Yes" Name="cYes" />
+      <Variable x:TypeArguments="x:String" Default="55557C" Name="vMCR" />
+      <Variable x:TypeArguments="x:String" Default="TMC" Name="cTMC" />
+      <Variable x:TypeArguments="x:String" Default="TMC-SIN.LOCAL" Name="cTMCLocal" />
+      <Variable x:TypeArguments="x:String" Default="TMCE.TEST.2106 *Test* HCIS" Name="cESign_Test" />
+      <Variable x:TypeArguments="x:String" Default="TMCE.LIVE *Live* HCIS" Name="cESign_Live" />
+      <Variable x:TypeArguments="x:String" Default="DR.TMC.WPCM" Name="cDefaultAccess" />
+      <Variable x:TypeArguments="x:String" Default="Other" Name="vSpecialty" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="vDelayBtwKeys" />
+      <Variable x:TypeArguments="x:String" Name="vMnemonic" />
+      <Variable x:TypeArguments="x:String" Name="vFirstName" />
+      <Variable x:TypeArguments="x:String" Name="vMiddleName" />
+      <Variable x:TypeArguments="x:String" Name="vLastName" />
+      <Variable x:TypeArguments="x:Int32" Name="First_row_index_from_Find_First_Last_Data_Row" />
+      <Variable x:TypeArguments="x:Int32" Name="Last_row_index_from_Find_First_Last_Data_Row" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser: EMR Test" sap:VirtualizedContainerService.HintSize="724,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,2271" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter &quot;Username&quot;" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Text="weekiatquek" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://tmcetwi-adfs.tmc-sin.local/adfs/ls/?SAMLRequest=jZFNT8JAEIb%2fSrP3dgttpdlQEpQYSTASqB68mGWZwibdXdyZqj%2ffpaiBC%2fE478wzH%2b%2bMUZr2IKYd7e0K3jtAir5Ma1H0iYp13gonUaOw0gAKUmI9fVyIYZKKg3fklGvZGXKdkIjgSTvLovmsYm%2bbYiCbdHCTZdDkMJCl2siizLO0yPOiKRsWvYDHUF%2bxgAcIsYO5RZKWgpQOszjN4%2bGoTkeiuBFF%2bcqiWbhBW0k9tSc6oOCcjAL61LHcNpiEIEZtk9Yp2fKjxFvkLJr%2bbnfnLHYG%2fBr8h1bwvFpcdjI%2bpjDlr5FyJsEdP2pcKmTR8seZW2232u6um7I5FaF4qOtlvHxa1yy6d15B%2f5WKke%2bATcZHd0VvgJ%2f8c5kxP4dO0eWzJ98%3d&amp;RelayState=https%3a%2f%2ftmcemr-test.tmc-sin.com.sg%2ftest%2f" DesignTimeRectangle="1421, 668, 218, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT userNameInput'" FullSelectorArgument="&lt;webctrl id='userNameInput' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userNameInput' tag='INPUT' type='email' class='text fullWidth' aaname='User Account' /&gt;" Guid="6b660e6e-43a1-412d-993c-16f751147a27" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAN4AAAAiCAYAAAAwN2fVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJPSURBVHhe7Z3BsYIwEEB/CR6tzRY8UwVVMJYhPXigCsYOvOxnSQJJiDpIIJf3ZtaRhCxxZt9Pvof4JwBwOIgHUIBJvNfrJY/HQy6Xi5zPZzmdTgRBbAx1SZ1St9QxxySediAcQewT6pY65pjEUyv1huv1Ks/n07YCwBbUJXVK3VLHHJN4brVDOoC8qFNu1XNM4mmHBgDkJ/YL8QAOAPEACoB4AAVAPIACIB5AARAPoAArxOulrStpOnvp0d0qqe+9vQKAbyAeQAEQD6AAu4jX32upqspGI/MQk2Pqu3nJukaqupV2yKV943NsW+fn88cMhM/y5+fm20kTjPXnUEsb/73QZ7r7U/0AGcgvXt9K7cs2FL55b8bPgkb5bMEH+W1bmDuS69YOr/ZKJRxENddOMDcXJ+Ask857IX8wdyO+yw+Qi53ES6wUsZCKFrYr/FSRJ9o+bmuDZyznmxTNy7/MrTlY9SA/2cQL2u3KFKxgWuS2LQhX+L+Kt8j7XjxdERdjp/zm/jCXidRnBtjCCvESRT/yXshhxLi9G/tUxlgsn1/Ei/u/rHifxTO5kQyOYJV4Y6FG28jw/6qB4Z65eP3iN++X4loSkqXafPHGZ3tbx/F6g3jm80XbYYAdWCeeMhantxWLZfG2mRqhaN43jDYmMX4QL85X35pNK55i5PXmGM8JIAPrxQOAzSAeQAEQD6AAiAdQAMQDKMBb8TjeD2AfPh7vx4G2APlRlz4eaMsR7gSxX6hbySPc+dESgsgf6pI6pW4lf7QEAI4D8QAOR+Qfk57nfJnCzgIAAAAASUVORK5CYII=" InformativeScreenshot="22438a8255711105dae6e1573bf332ee.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign In' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter &quot;Password&quot;" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Text="QWK@Thomson1403" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://tmcetwi-adfs.tmc-sin.local/adfs/ls/?SAMLRequest=jZFNT8JAEIb%2fSrP3dgttpdlQEpQYSTASqB68mGWZwibdXdyZqj%2ffpaiBC%2fE478wzH%2b%2bMUZr2IKYd7e0K3jtAir5Ma1H0iYp13gonUaOw0gAKUmI9fVyIYZKKg3fklGvZGXKdkIjgSTvLovmsYm%2bbYiCbdHCTZdDkMJCl2siizLO0yPOiKRsWvYDHUF%2bxgAcIsYO5RZKWgpQOszjN4%2bGoTkeiuBFF%2bcqiWbhBW0k9tSc6oOCcjAL61LHcNpiEIEZtk9Yp2fKjxFvkLJr%2bbnfnLHYG%2fBr8h1bwvFpcdjI%2bpjDlr5FyJsEdP2pcKmTR8seZW2232u6um7I5FaF4qOtlvHxa1yy6d15B%2f5WKke%2bATcZHd0VvgJ%2f8c5kxP4dO0eWzJ98%3d&amp;RelayState=https%3a%2f%2ftmcemr-test.tmc-sin.com.sg%2ftest%2f" DesignTimeRectangle="1421, 706, 350, 30" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT passwordInput'" FullSelectorArgument="&lt;webctrl id='passwordInput' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='passwordInput' tag='INPUT' type='password' class='text fullWidth' aaname='Password' /&gt;" Guid="a3c05704-204c-4bd5-b21e-fd0cfb0a115b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWIAAAAiCAYAAABlc9OiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJHSURBVHhe7dgxjuJAEEDRvTQhIRmEhGSEZGQQcgNuACcgI/TqI8qq7bU1DDPr0o7+k1pj2nYbkj8t/+okSaUMsSQV60N8OBwcDofDMeEIf4RYkjQNQyxJxQyxJBUzxJJUzBBLUjFDLEnFDLEkFTPEklTMEEtSMUMsScVeDvF2u+1ms1k/FotFd7vdnmf/b/yO1WrVXS6X54wkTedTIT4ej89P3eP4p8TYEEuq9HaI7/d7t9lsfkS8DLGkSm+HOMeLKK/X69HXFtw3dG5ofmjnzdo8A+fz+a/PsQaD+0N8r/1+383n8/6+9vvudjtDLKnM2yHOgSRgp9PpMR+Ri2s5R+Qivtfr9XE8Np9DG2sR0Ygk68baXJvPtc+Oz7FenotrwG/L60jSlD4V4rzzzHFrEbnYmRI3drtt5MbmiTFr85fBOrwCIbo8L78Oaf85YCjkzAXuzf8AwLE7YklV3t4Rt9pQR4hB4NhxMt9GsZ3P8WTwTP6yHtcT4rHIIod26BqOI9TBEEuq9C0hbs9xnEMcCB674Dae7Xzcz7tb4sh54snrj7zu0Hf6KNY51IG5od25JE3hyyFuYxefI5jMt+dibmgeBHG5XPZBBVFuI87xK++I8z0R/fxb+K6+I5ZU5Vt2xIQuXkkQNAIaISZu8fqBEWuMzaMNKjgmoHkni/zssXVyiBExjnvYaftqQlKVl0MsSfo3DLEkFTPEklTMEEtSMUMsScUMsSQVM8SSVMwQS1Kx0RA7HA6HY7oR+hBLkmoYYkkq1XW/AVWw/FvWzzLlAAAAAElFTkSuQmCC" InformativeScreenshot="0520ed6ba053bd8170585001e4b8f4db.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign In' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click &quot;Sign in&quot;" sap:VirtualizedContainerService.HintSize="358,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://tmcetwi-adfs.tmc-sin.local/adfs/ls/?SAMLRequest=jZFNT8JAEIb%2fSrP3dgttpdlQEpQYSTASqB68mGWZwibdXdyZqj%2ffpaiBC%2fE478wzH%2b%2bMUZr2IKYd7e0K3jtAir5Ma1H0iYp13gonUaOw0gAKUmI9fVyIYZKKg3fklGvZGXKdkIjgSTvLovmsYm%2bbYiCbdHCTZdDkMJCl2siizLO0yPOiKRsWvYDHUF%2bxgAcIsYO5RZKWgpQOszjN4%2bGoTkeiuBFF%2bcqiWbhBW0k9tSc6oOCcjAL61LHcNpiEIEZtk9Yp2fKjxFvkLJr%2bbnfnLHYG%2fBr8h1bwvFpcdjI%2bpjDlr5FyJsEdP2pcKmTR8seZW2232u6um7I5FaF4qOtlvHxa1yy6d15B%2f5WKke%2bATcZHd0VvgJ%2f8c5kxP4dO0eWzJ98%3d&amp;RelayState=https%3a%2f%2ftmcemr-test.tmc-sin.com.sg%2ftest%2f" DesignTimeRectangle="1421, 777, 85, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl id='submitButton' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='submitButton' tag='SPAN' type='' class='submit' aaname='Sign in' check:innerText='Sign in' /&gt;" Guid="2cde7461-d5a6-4824-ad97-ef5c907c8237" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFkAAAAkCAYAAADit5awAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF5SURBVGhD7ZcxjsIwFAW57R6A6+QEnGCblFwhSk9BhWigovg4tpM8G4tdoTwrQW+kKbJGhkz+GrEzQUeRK6DIFUgi735+5UIiikwSUWSSiCKTRBSZJKLIJBFFJokoMklEkUkiikwSqRC5t/Ye38DzsPYQ1w4Xu+L10rL3fyNCjnyyzu3bHeFv7sZbvP5SEW5kP0k3a0prXy5Sf5Jf1tN/533/CB9m4Hyy5mx27fuwfryZ3S/WZK+Z98tN9/d7xz1Hpr0XFuGfyX6aB0oTXYjgIu7H9SGqI4mM13Hv/z7E8QFOr/f7cc5spMIXXzQGSicPI4QvyDxYaZKnh5Cvv1ie5Hm9/J5LiNSL7A03NUfBCGmQUUX+wPRG88j5DWcPRZELujOzSwK8m+QQ7M8zWZFzw3QiaZA0wnjTEy6Ijgu6vAhskVVH9pO30R8zyKoih6jIdn8tIis/LrYrosgkEUUmiSgySUSRSSKKTBJRZJJIEllwUOQKKDIdsyentLNHmue/5AAAAABJRU5ErkJggg==" InformativeScreenshot="d6eedd30f1ecf6b907f2c0d55e5dc192.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign In' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click &quot;New Session&quot;" sap:VirtualizedContainerService.HintSize="358,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://tmcemr-test.tmc-sin.com.sg/test/" DesignTimeRectangle="628, 210, 620, 39" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Launch New Session'" FullSelectorArgument="&lt;webctrl aria-label='launch new TMC.TEST.2106 session' aria-role='link' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='launch new TMC.TEST.2106 session' aria-role='link' tag='A' type='' class='launchpoint-button click-target disabled' aaname='Launch New Session' check:innerText='Launch New Session' /&gt;" Guid="3b52b66f-2ebf-4433-a3ba-67e5ca1a6cbd" ImageBase64="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" InformativeScreenshot="ec6409e60e82686046916938d2f0a639.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MEDITECH' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Signon'" sap:VirtualizedContainerService.HintSize="358,157" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="1784, 991, 73, 51" DesignTimeScaleFactor="1" FriendlyName="'msedge.exe MEDITECH'" Guid="5d0d9b1b-7633-4cb4-aa73-e3aae185f313" ImageBase64="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" InformativeScreenshot="2cafaea7a1a41f5d1bff124865db9c20.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='MEDITECH - Work - Microsoft​ Edge' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Info Systems'" sap:VirtualizedContainerService.HintSize="358,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://tmcemr-test.tmc-sin.com.sg/test/s0001199845356499/" DesignTimeRectangle="17, 613, 157, 26" DesignTimeScaleFactor="1" FriendlyName="'msedge.exe MEDITECH'" Guid="47691ca3-c75f-4f70-8edb-0a721850e3b7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAaCAYAAACtk162AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALLSURBVHhe7ZjLseJADEVJhTwIAiIhARIgAJJgTw4syIANEbBk61eH4lKaO90Pg43xDDpVKuz+SGr1pcGenM/n5nA4NN/K5XJplstls16vby1JF9ASmvrNvl50+/2+mc1mzfF4vLUkXUjRJYOToksG5ynRnU6ntLTOliddMjijER1PhtPp9Grb7fbWmvyPdBYdfYvF4i4YjKe9Z2A8PvDVF1HEsnwCHQe9nXScTrzL4p3WsyCQvt6BkSsCLuVCjD5P0XyV8hofF51evPYlhiGFkKKrM5lMbld/81bRaVN2u931Uz9zUWD+Mxh/ZhkX+9oIs40QJHQ/XdUe11HLD/9xTbEPyCP2eW3wK9MY5e1zuY94XR6t9xMguprw3i46ihLbtVkqpDbaBYC/WExyYFN9nKNxxP1NpPRFkYDnRixf02azuefEuNKGl3y7L4ktCkptcY0eo+SbtuhnDEh0JeENctLFTZHIGB/vY6GJR2E1RtQ22dF8NjBa9FeKEYVRyssp5SO/LgLGzOfz+1j8um/muKAYTwz5izmOmSg6F94oReeFFrX2RyiGnyIxZ9boYqFfgvV1QGl9ylHzosWxbUXnefEZfcZ8x4SLLgrvK0QniBFzjP4w33BBX0k4tPv6uI4nWo1XRSeU+1jFVxMcjFJ0xKPQGiNK/hweWmr9LjqgbbVa/ZFTDc+rlE8td6er6ESpfmOgJjgYpeiA/jiXHCj+o+Iyj2++b7raffO49xMMyAsxxjauGScffi9KsfBH7qwDuPa1MP6R6JgT/arf1/tpaoKDzqKjj0VTZJmKwuerogNtnqxtYYkb52G+meKZ+FjccIhjYoxSDjEG1x6TOZ6n6qu4Jb9t6zIkNcFBbyfdvwpfiDb/wZL++HrRcdpw0nHiJcPw1aKr/SdL3svXn3TJ8KToksF5SnRpaX2Zi8ztKrq0tCEtRZc2sJ2bH/lLjCdnPiloAAAAAElFTkSuQmCC" InformativeScreenshot="702d2f4943c4abe047b32b81be79d9bb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MEDITECH' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'MIS'" sap:VirtualizedContainerService.HintSize="358,157" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://tmcemr-test.tmc-sin.com.sg/test/s0001199845356499/" DesignTimeRectangle="174, 587, 62, 22" DesignTimeScaleFactor="1" FriendlyName="'msedge.exe MEDITECH'" Guid="ea5de5c1-fed1-4f6e-a39f-3cef46d34ffd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAWCAYAAACYPi8fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFjSURBVFhH7ZSxSsRAEIbzKnkHr7PTq88rBRstrATvAU5QsDmwEaurzqsOLOyuEeHQSiGVre+wpe3If/Afu+OuJtlFJUnxQTKTncy3s0lmjJE2shEviqLxBMVf5amxdOJVxCd3l5LnuYwmJ19y9+8L6W1vrcG1HcMaYOd8eeKrn4oocS3wUw4iWobPz16mThxrh4cDeTRLJ56K2uIHp/tyPD5yRNAkmj2fjUuJP388rOvozUhFlmXeOIgSX7zNpb+3sxFkfLq6+TfiIfkocUyYjVMCRxZUPer94W7yY01xn3yUOGQhiaavl1dOrKw4oLxNio2wxbV8tDgnjWb5g6oqrsF61PPVqIIWt+WjxXHPqXNCseIAa1GDm1mHkDRIIq4pK46Nurg9c54hqcV17s/FcVL098z4d+8oQ0ga/Io4p8cfl51DDdRijuAdds06hKRBLfEm0Il34p14i8Wbjle8XRj5BPPT8aZ6JSf9AAAAAElFTkSuQmCC" InformativeScreenshot="e934cdba4c887dfb97786b3851ee8122.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MEDITECH' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Dictionaries'" sap:VirtualizedContainerService.HintSize="358,157" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://tmcemr-test.tmc-sin.com.sg/test/s0001199845356499/" DesignTimeRectangle="244, 607, 227, 21" DesignTimeScaleFactor="1" FriendlyName="'msedge.exe MEDITECH'" Guid="9cc75b4d-88d2-427a-8062-b67e41e228bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOMAAAAVCAYAAAC0RVlIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVHhe7ZxBbsJADEVzFe7BIeAknIMDcAn2rNmy4AZIiBNkyTbVj/jUuDYdRKAp859kZeKxPTORf5N20eZ0OnUymez9tt/vu7Ztr9Z0Qog/QWIUYiQUi3G9XneTyeSHLZfLS8Q3u92un8P1GYaqMzRj3Zf43zwkxvl83gcRjOGbTqfd4XC4eB8Huaih5hY185QYCd6O2VwJEqOohabJfxMcRIxeTJm4/Kcu6h2Px/5q/XzTRnWwvo33e2LOZrO5ifOf09Fnt4/B/WKx6Lbb7TUGeaXn+21NnlPUA8SYCXIQMZ7P575p2XxRs2LO569Wqz42a27vRy5q2CbHvmxTM8euxTzEEoztPfOsD+tEoor2ixg8AzwL4J8J6vrzw+fPLD4bijES5FvEGDWvJZv3/mgPJT8IAOYZk+FjMLYCI9H5ZrNZf7VgnvvNaom6sGL0gnyLGHHFvW9W4uOJ92cNbf1ZLcRwfwRnsp+N/i2YrRedz9eh8Zn5GL8/UQdejFaQb/mdEVfcwx+RCcj7M3FYf1YLMRQa4hDvz2NjgK1ric6XPRsPcyXKOsmECAYRo29a36yZQEg27/1DfaaWxACMS8SY1buH37eog0yI4CkxsqHQiGhIEjUnms7n8w848GEOa1h8HcbZBkaOXT9aGyCHedF6iMebytbGuESMALF2HwDrwI98XG18dmbx2WRCBA+JkZ9W1mzzknuCsLm20SkGGJs6qsMmZizG8JF7a9u9Mo51OG9jMC4VI4ieEcVmz+fnRD1kQgTFYhRCvBaJUYiRIDEKMRIkRiFGgsQoxEj4Icbo3wHIZLLXm96MQoyEWzG23Re5FcSDmY2ytAAAAABJRU5ErkJggg==" InformativeScreenshot="232cebc47aa9ab94885298a1b1d9a371.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MEDITECH' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Person/Profile'" sap:VirtualizedContainerService.HintSize="358,157" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://tmcemr-test.tmc-sin.com.sg/test/s0001199845356499/" DesignTimeRectangle="478, 629, 211, 22" DesignTimeScaleFactor="1" FriendlyName="'msedge.exe MEDITECH'" Guid="d9acb40d-e7ff-4af3-a4fa-082c2608c40c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANMAAAAWCAYAAABaIqneAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL6SURBVHhe7ZnLcepAEEVJhTwIAkIgAhIgAaJgTxJsWZABGyJgyRbXobh2uz0Ngxh46NGnasowmk9LusfCZrDdbk9JknQDfw6Hw7l9pEyLxeLcXgn7DYfDc1utVpfeHzabzWk0Gp12u92lJ+kD1TJx0xUAtclkcp7YVwjreDz+Di0/CbE/T8LdCtay1+14PJ5ms9m58RpSpn5yl0xeHn7D9vmmc042xJLJysNrhCo9QbpQ8yRMmfrJQzLxmr5WQXsleiLY2ksyAeG30nWltGeJlOl9GQwGl1d/eUgmhcP+pmWc/Yhkjyms6/X6PI/jWlNiRnOB9/Z4FPrlcvk9JgolfdPp9Nf5RDLZc1fQ+al6rWjXavTHtKbq1hraw9btr090XslzQaZIqKZPJh8KL5vCGgVF6wB9zLMhtftrLTuHMQTN9pXqBvpVl9CaXibG6bw4ZkWw3KrRXw9h1wcvU6muknDJ85FMJaE6y6RgqI+bav+YF9x0O6YU1qhfRMd9TT6UUKqL8cyrqYM9kEd9/CyFuKbGrjJx3M/RWhI1eQ1WJi/UXTLpI4aaD4A/rnZLJgVD4+26EAW4FDo/l2NeJuZZCYXqs7X7fWtrEbZf53mPTP7a+JYyvRYvkxWq85PJEwXUQjgICWMjCJaCooDVBBVqZWJcKYQ19dXWImz/IzKlNO9BJBI0k6kmiDVjhA1UNM/XVCMTY/nHg95bon0sti5LNNfW2EUmKJ1X8m+IRIJmMgE33QeN8fQThChw9M/n819hKYli32stxolS6BhnZWJ8FMyoPkskE9yqkT27yKR1/DzWvVZr0p5IJGgqEzDOfqanKUxRWBUyO6e0F2GyY/w6PpTAnpJJ+6geT1SfxQfdc63GrjIB14JrYteuuR9JWyKRoFqm/wHC6b9bSpJWfJRMPAH8UyFJWvFRMiXJM0mZkqQRKVOSNOKPTPv9Plu2bB1aPpmSpBFvIxPfreT3JkmfqZIp+jJTX9CW+iUGjde3/iWdMiV950emw+kLEeyP9nFTXDwAAAAASUVORK5CYII=" InformativeScreenshot="457fee18ccf6b70779cc1e30b68168ce.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MEDITECH' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Person'" sap:VirtualizedContainerService.HintSize="358,157" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d51adc6e-9c4f-4ab1-b693-3234b975cf59" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://tmcemr-test.tmc-sin.com.sg/test/s0001199845356499/" DesignTimeRectangle="693, 516, 233, 25" DesignTimeScaleFactor="1" FriendlyName="'msedge.exe MEDITECH'" Guid="daae5014-223d-4a27-9758-827c54d6b9e2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOkAAAAZCAYAAADUpQn6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHDSURBVHhe7dYhTgNBFIdxrtI7gMNBPUgSFAJFAgeoQGCqUVWVJAgchpAQUJD0BpieYCV2yL/JI6+zO3Sb7nZn4dvkl9DZN9uaj9mdoigCgHwRKZA5IgUyR6RA5kqRzmYzAB2Km6yM9CO8AugAkQKZ2zjS8f1NGAwGS4bHh+G5eKycB7CeRiKNo7waX4S9/d3w8Hm3NAtgfa1Eqr+1pnt+FsD6Won07espnF6eLE5UP+dfif09nbg6eScvt4t9/pXZgk/tFX3296fvk9J9Pfd6OvqZ4aRHX2zlJLVIFK8+xxFbpHE48XNsTfvsWfrbf789y+/RjML0a1W/G8hR45FagLamaIZHB6VTS6edn1FY8QmYWl91P/5N8T8JSf0uIDeNRGqvkMYHoYDi+2ZVpBa8zcehaV774tDidSJFnzV+ksYUzG/3JRWpZ6+sPlYixX/QeqR1AqwzY3yAqX287uIvaT1SUST+ZBPNa13hpGLT+vnobCmuqgD9Z3uW5mwPkaLPthKpaM5eV42FlIpUUSkuv6fquxShn4mfQ6Tos40jBdAuIgUyR6RA5ogUyByRApmrHel8PgfQgdqRcnFxdXOVIy3CN2zTp7D6DWa+AAAAAElFTkSuQmCC" InformativeScreenshot="d7d3bb4c7a73f65b1dfb888731726c7e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MEDITECH' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NGetUrl CurrentUrl="[vURL]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="358,87" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V3" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="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" InformativeScreenshot="a7021736fe57b38901cca3278a97de55.jpg" Selector="&lt;html app='msedge.exe' url='tmcemr-test.tmc-sin.com.sg/test' /&gt;" Url="tmcemr-test.tmc-sin.com.sg/test" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="724,1484" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="690,1397" sap2010:WorkflowViewState.IdRef="Sequence_26">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="648,1309" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="[string.Format(&quot;{0}\OneDrive - thomsonmedical.com\EMR Doctor List.xlsx&quot;, Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="UserList" />
+                  </ActivityAction.Argument>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="614,1040" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="572,952" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[UserList.Sheet(&quot;EMR User List&quot;)]" SaveAfterEachRow="True">
+                      <ueab:ExcelForEachRowX.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538,770" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Get User Input" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;Mnemonic&quot;)]" DisplayName="Read 'Mnemonic'" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+                                <ueab:ReadCellValueX.SaveTo>
+                                  <OutArgument x:TypeArguments="x:String">[vMnemonic]</OutArgument>
+                                </ueab:ReadCellValueX.SaveTo>
+                              </ueab:ReadCellValueX>
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;First Name&quot;)]" DisplayName="Read 'First Name'" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
+                                <ueab:ReadCellValueX.SaveTo>
+                                  <OutArgument x:TypeArguments="x:String">[vFirstName]</OutArgument>
+                                </ueab:ReadCellValueX.SaveTo>
+                              </ueab:ReadCellValueX>
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;Middle Name&quot;)]" DisplayName="Read 'Middle Name'" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
+                                <ueab:ReadCellValueX.SaveTo>
+                                  <OutArgument x:TypeArguments="x:String">[vMiddleName]</OutArgument>
+                                </ueab:ReadCellValueX.SaveTo>
+                              </ueab:ReadCellValueX>
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;Last Name&quot;)]" DisplayName="Read 'Last Name'" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
+                                <ueab:ReadCellValueX.SaveTo>
+                                  <OutArgument x:TypeArguments="x:String">[vLastName]</OutArgument>
+                                </ueab:ReadCellValueX.SaveTo>
+                              </ueab:ReadCellValueX>
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;MCR Number&quot;)]" DisplayName="Read 'MCR'" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="ReadCellValueX_5">
+                                <ueab:ReadCellValueX.SaveTo>
+                                  <OutArgument x:TypeArguments="x:String">[vMCR]</OutArgument>
+                                </ueab:ReadCellValueX.SaveTo>
+                              </ueab:ReadCellValueX>
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;Specialty Code&quot;)]" DisplayName="Read 'Specialty Code'" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="444,159" sap2010:WorkflowViewState.IdRef="ReadCellValueX_6">
+                                <ueab:ReadCellValueX.SaveTo>
+                                  <OutArgument x:TypeArguments="x:String">[vSpecialty]</OutArgument>
+                                </ueab:ReadCellValueX.SaveTo>
+                              </ueab:ReadCellValueX>
+                            </Sequence>
+                            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: EMR Test" sap:VirtualizedContainerService.HintSize="496,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" OpenMode="Never" ScopeGuid="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Version="V2">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,18830" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'Create'" sap:VirtualizedContainerService.HintSize="436,157" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://tmcemr-test.tmc-sin.com.sg/test/s0001451640597907/" DesignTimeRectangle="1722, 609, 117, 23" DesignTimeScaleFactor="1" FriendlyName="'msedge.exe MEDITECH'" Guid="10499aab-ed89-4cf1-a574-2b4c8063b0ae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAXCAYAAAA1OADtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGoSURBVGhD7ZYxTgNBDEW5yp6CcAMSuAQS4goUiAOkoCBNijRI0CBEQUFDR0NBl4pUiCrXmOgjfeR1ZnY9RUTkdfGkZDyzjvzs2RysftYp8EVIdUhIdUhIdUi11KeX19Q0TYvLq+vs3uB/qJIKeYejo/T2/vG39rn8SuPJaTo7v0jL1Xdr/y5ADuSKRipjljqbL7aEShZ3DyF1TzBJrSkkpEP+/ePz7xlcz5hkTDTi+vrWE44cMg7QUNY4PsvYEOWbpPKKlcUrQam5qcZ5KRig6FIsvkM842wCrnU1mH5WTTN6wiSVomSxS5T2sjH0OvYfj0+2GoBQDBuqJKr0HOTTjeSdnU1qTh7W5dVI9FRDmN7TJxX59BkSUjPUXGNdUrsmErB5kAs5sWad1CFOZAmTVICi6omS8N9vSapl2nFG57BKLeUdImapLKYuup6uruJCDK5DGcMZCMJzcmd5RjYD9jMf17ie+31Y13s9Y5ZKUHD5vgJyavompu+8jk9vbluTCthI3CNjbAKJjA+BaqnB/hNSHRJSHRJSHRJSHRJSHRJSHRJS3bFOG+ja09OHWms4AAAAAElFTkSuQmCC" InformativeScreenshot="dd8129028f0d1b022c35813f8502474f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MEDITECH' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V1" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                    <Sequence DisplayName="'Main' tab" sap:VirtualizedContainerService.HintSize="436,8820" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Mnemonic'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[vMnemonic]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'First Name'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'First Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[vFirstName]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Middle Name'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Middle Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[vMiddleName]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Last Name'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Last Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[vLastName]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Title'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Title'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="DR" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayAfter="1" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'Profile'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Profile'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="DR.PROFILE" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'Is User a Clinician'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Is User a Clinician'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayAfter="1" DelayBetweenKeys="1" DisplayName="TAB to 'Domain'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}{4}{5}{6}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Domain' (TMC)" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cTMC]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'MCR'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'MCR'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[vMCR]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Domain' (TMC-SIN.Local)" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Domain' (TMC-SIN.Local)" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_22" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cTMCLocal]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'MCR'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_34" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'MCR'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_35" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[vMCR]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'PIN Reset'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_23" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'PIN Reset'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_24" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Default HCIS'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Default HCIS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_26" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cESign_Test]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'Electronic Signature'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_27" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Electronic Signature' (EMR-Test)" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_28" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cESign_Test]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Enabled'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_29" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Enabled'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_30" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Electronic Signature' (EMR-Live)" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_31" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Electronic Signature' (EMR-Live)" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_36" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cESign_Live]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Enabled'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_37" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Enabled'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_32" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                    </Sequence>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB out of 'Main' tab" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,225" sap2010:WorkflowViewState.IdRef="NTypeInto_40" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB out of 'Clinical' tab" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,225" sap2010:WorkflowViewState.IdRef="NTypeInto_48" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <Sequence DisplayName="'Jobs' tab" sap:VirtualizedContainerService.HintSize="436,4050" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Enter 'Job Menu'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_41" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cDefaultAccess]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Dft'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_42" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Dft'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_43" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'Facility'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_44" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Facility'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_45" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cTMC]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Dft'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_46" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Dft'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_47" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'Business Unit'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_51" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Business Unit'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_52" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cTMC]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Dft'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_53" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Dft'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_54" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'HIM Department'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_55" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'HIM Department'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_56" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cTMC]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Dft'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_57" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Dft'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_58" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                    </Sequence>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB out of 'Jobs' tab" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,225" sap2010:WorkflowViewState.IdRef="NTypeInto_59" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}{4}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <Sequence DisplayName="'Appl Access' tab" sap:VirtualizedContainerService.HintSize="400,1061" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Enter 'Application'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NTypeInto_60" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="EMR" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Default Access'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NTypeInto_61" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Default Access'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NTypeInto_62" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cDefaultAccess]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Application'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NTypeInto_63" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'OM'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_64" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="OM" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Default Access'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NTypeInto_65" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'OM.DR'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_66" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="OM.DR" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                    </Sequence>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB out of 'Appl Access' tab" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="NTypeInto_68" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="3" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB out of 'Financial' tab" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="NTypeInto_69" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="3" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB out of 'External' tab" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,225" sap2010:WorkflowViewState.IdRef="NTypeInto_70" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}{13}{14}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <Sequence DisplayName="'External-Fac' tab" sap:VirtualizedContainerService.HintSize="436,81" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="3" DisplayName="Enter 'Facility'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_75" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cTMC]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Active'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_76" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Active'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_77" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                    </Sequence>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB out of 'External-Fac' tab" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="NTypeInto_74" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}{4}{5}{6}{7}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <Sequence DisplayName="'Clinician-Main' tab" sap:VirtualizedContainerService.HintSize="400,2121" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="3" DisplayName="Enter 'Clinician Type'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_79" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="Physician" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'License Number'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NTypeInto_80" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'License Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NTypeInto_81" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[vMCR]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'On Staff'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NTypeInto_82" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}{13}{14}{15}{16}{17}{18}{19}{20}{21}{22}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'On Staff'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NTypeInto_83" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Admit Priv'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NTypeInto_84" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Admit Priv'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_85" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Ordering Consultant'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_86" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Ordering Consultant'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_87" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Elec Sig'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_88" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Elec Sig'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_89" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="Both" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                    </Sequence>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB out of 'Clinician-Main' tab" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="NTypeInto_90" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <Sequence DisplayName="'Clinician-Addl' tab" sap:VirtualizedContainerService.HintSize="436,81" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="3" DisplayName="Enter 'Specialty'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_91" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[vSpecialty]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                    </Sequence>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB out of 'Clinician-Addl' tab" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="NTypeInto_92" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB out of 'Clinician-Ins' tab" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="436,52" sap2010:WorkflowViewState.IdRef="NTypeInto_93" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <Sequence DisplayName="'Clinician-Fac' tab" sap:VirtualizedContainerService.HintSize="436,81" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="3" DisplayName="Enter 'Specialty'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_94" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cTMC]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Active'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_95" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Active'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_96" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Clinician Type'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_97" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Clinician Type'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_98" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="CP" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'License Number'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_99" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'License Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_100" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[vMCR]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'Primary Specialty'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_101" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Primary Specialty'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_102" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[vSpecialty]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBetweenKeys="[CType(vDelayBtwKeys, System.Double)]" DisplayName="TAB to 'On Staff'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_103" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[string.Format(&quot;{0}{1}{2}&quot;, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString, &quot;[k(tab)]&quot;.ToString)]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'On Staff'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_104" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Admit Priv'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_105" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Admit Priv'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_106" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Ordering Consultant'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_107" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Ordering Consultant'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_108" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[cYes]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="TAB to 'Elec Sig'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_109" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="[&quot;[k(tab)]&quot;.ToString]" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Enter 'Elec Sig'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,225" sap2010:WorkflowViewState.IdRef="NTypeInto_110" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Text="Both" Version="V3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                    </Sequence>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="436,157" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://tmcemr-test.tmc-sin.com.sg/test/s0001611620075398/" DesignTimeRectangle="1660, 999, 58, 40" DesignTimeScaleFactor="1" FriendlyName="'msedge.exe MEDITECH'" Guid="e34f79c1-f5d8-4ed2-8de9-eb79e766faff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAoCAYAAACvpem4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGtSURBVGhD7ZQ9S8RAEIbvr+RniP6DEz9aC8HGxkKwsdFOCJbaqYWCVhZ211uJtY2CIBaSRrAS25U33Bsmw2xOSDzd3BQPd7vZ2Z1nZ5JBnuehzzy9FiWD4jOEGFhozaeCi2pcNBFcVOOiieCiGhdNhJro/sGhuQi46Ji7h+cwN78Qsiyr0bTnNOlE9OzyupQa3d7X5iG/tr4RHt8+avN/QWvRl/evsLm1/W8qF2OqolZ7Ly6vVhXHL8boEBlnnYHukfvgOdbJOElrUcDWlUlbQHRnd69KiAIySeSgk4YULgjxGOM8fZYVJ+lEFFBWMkkcQEKuY9Xl+468mBurbn0Phksr1WVoOhPVsLVkJQBFYhfCKsfErHiiz5L8mihgUkzS+jrjv668nEOMbEns2VS5GK1Fkczx6YX5TIrqShFLlFU8OjkvYyCrn8m5n9CJKA6OJSurgf3lOBYLWP2mZ7IzsCf212tJa1HAavFdIfrW9TpIXN2MTBl2QywnSMqzwKT8K1FrAWkSTQEX1bhoIrioxkUTwUU1LpoILqpx0USYTVEM+kwlyj99Z0ZEi/ANwiK69/0fkgIAAAAASUVORK5CYII=" InformativeScreenshot="2eb653ae59085f65b1cd1600a25ee754.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MEDITECH' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V1" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="9, 997, 1709, 42" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl class='overlayEle' idx='2' parentid='displayArea' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='overlayEle' type='' parentid='displayArea' tag='DIV' aaname='' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                    <uix:NClick ClickType="Single" DisplayName="Click View" sap:VirtualizedContainerService.HintSize="436,157" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e50a10a6-4a9e-4b09-b58c-6fd13592a3d0" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://tmcemr-test.tmc-sin.com.sg/test/s0001824130969621/" DesignTimeRectangle="1725, 529, 100, 30" DesignTimeScaleFactor="1" FriendlyName="'msedge.exe MEDITECH'" Guid="a12240e8-f59d-4707-9a53-fcd5e339524d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAeCAYAAADaW7vzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGySURBVGhD7ZWxSsRQEEX9lXyF+geuWovYCWIlCDYW4k/YWFhaiVhY2KyVFgp2W7mVWO1vPLmBK+MwLwmIMmRvcdhNZvICc/bOrsw/F0XkQUKSISHJkJBkSEgyJCQZEpIMCUmGhCRDQpJRFXJ6dl4mm9vlbfYe1i8ur8r+wWGZzT/a76tr62X69BL2iuFUhdzeP5SmadpPX4MkyIIIXxO/oyoEv3wkAEnxNUhSIv6Gzv8QJCBaW5DEdYXrSBBThJQBW6dsmzDU0GMTadci742dTiHRkKJ15YVEz/keLxXnQZxNJL5HCR0znUKitYXB+tREw/aD9Kmw59j38B7FW6nLQKcQgAFaAdGwrRAOl6vKQyHo3ZhstZ9gZ3evPD6/fkuwdfuusdMrBAPBsDHI2q82EsLB17B9BPcpHGeijj7/7JjpFQIwIAzn+ubuR1qIFWL7+4YJCUfHJy18FmfhHUOkjpFBQjAkrhy/rli3Qpgq34sBo5fXPNfKY3Jw3/YuC4OEcFXVhuSFAPsM8elij08Crn3vsjBIiPg/JCQZEpIMCUmGhCRDQpIhIcmQkGRISCoW5QskD4jRhRj/IQAAAABJRU5ErkJggg==" InformativeScreenshot="f1737b19baec644e3e1ac85751930ebe.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='MEDITECH' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V1" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAuSURBVDhPY0g40PCfEkx9AwgBdPVYDUAXw4eHqwH4ALr60UCkRSCSigfagIb/AFw/yr9yPXeMAAAAAElFTkSuQmCC" InformativeScreenshot="7a197de53243328df02ea9ee35d72610.jpg" Selector="&lt;html app='msedge.exe' title='MEDITECH' /&gt;" Url="[vURL]" />
+                              </uix:NApplicationCard.TargetApp>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NApplicationCard>
+                            <Sequence DisplayName="Enter 'EMR Created' fields" sap:VirtualizedContainerService.HintSize="496,469" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;EMR Created By&quot;)]" DisplayName="Enter 'EMR Created By'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[string.Format(&quot;UiPath Bot&quot;)]" />
+                              <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;EMR Created Date&quot;)]" DisplayName="Enter 'EMR Created Date'" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_7" Value="[DateTime.Now.ToString(&quot;yyyy-MM-dd HH:mm&quot;)]" />
+                            </Sequence>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRowX.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ExcelForEachRowX>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+  </ueab:SequenceX>
+</Activity>
